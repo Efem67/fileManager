@@ -1,0 +1,84 @@
+body{
+    background-color: white ;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    margin-top: -20px;
+    background-color: darkblue;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+a{
+    margin: 30px;
+    font-size: x-large;
+    color: white;
+}
+
+.mainDiv{
+    margin-top: -18px;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: flex-start;
+}
+.vertMenu{
+    width: 400px;
+    height: 650px;
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+.content{
+    width: 1000px;
+    height: 450px;
+    background-color:white;
+    padding: 100px;
+}
+#showFilesTable{
+    margin-top: -100px;;
+    margin-left: -100px;
+    width: 1200px;
+    /* background-color: rgb(78, 57, 194); */
+    border-collapse: collapse;
+}
+td {
+    text-align: center;
+    /* border:2px solid black; */
+    width: 125px;
+  }
+
+.contentInfo{
+    width: 1000px;
+    height: 450px;
+    background-color: white;
+    /* padding: 100px; */
+    display: flex;
+    flex-direction: column;
+}
+.infoA{
+    color: darkblue;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.infoDiv{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -30px;
+    align-items: flex-end;
+
+}
+.contentA{
+    color: gray;
+    margin-left: 5px;
+}

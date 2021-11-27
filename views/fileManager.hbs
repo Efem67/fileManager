@@ -1,0 +1,59 @@
+<div class="mainDiv">
+    <div class="vertMenu">
+        <h2>File Manager</h2>
+        <a href="/deleteAll">Usuń dane o plikach w tablicy</a>
+    </div>
+    <div class="content">
+
+
+        <table id="showFilesTable">
+            <tr style="background-color: rgb(78, 57, 194);">
+                <td>
+                    <a style="color: white;">id</a>
+                </td>
+                <td>
+                    <a style="color: white;">obraz</a>
+                </td>
+                <td>
+                    <a style="color: white;">name</a>
+                </td>
+                <td>
+                    <a style="color: white;">size</a>
+                </td>
+                <td>
+                    <a style="color: white;">type</a>
+                </td>
+                <td>
+                    <a style="color: white;">---</a>
+                </td>
+                <td>
+                    <a style="color: white;">---</a>
+                </td>
+                <td>
+                    <a style="color: white;">---</a>
+                </td>
+            </tr>
+            {{#each files}}
+            <tr style="background-color: white;">
+                <td>{{id}}</td>
+                <td><img src="./gfx/{{rozszerzenie}}.png" alt="" style="width:40px; height:auto;"> </td>
+                <td>{{name}}</td>
+                <td>{{size}}</td>
+                <td>{{type}}</td>
+                <td>
+                    <a href="deleteOne/{{id}}" style="color:black; font-size:17px">DELETE</a>
+                </td>
+                <td>
+                    <a href="informations/{{id}}" style="color:black; font-size:17px">INFO</a>
+                </td>
+                <td>
+                    <a href="download/{{id}}" style="color:black; font-size:17px">DOWNLOAD</a>
+                </td>
+
+            </tr>
+            {{/each}}
+        </table>
+
+
+    </div>
+</div>
