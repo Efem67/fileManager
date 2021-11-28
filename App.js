@@ -142,6 +142,7 @@ app.post("/handleUpload", function (req, res) {
                 idPliku += 1;
             }
         } catch {
+            console.log(files)
             let nazwa = files.imageupload.name
             nazwa = nazwa.split('.')
             let roz = nazwa.at(-1)
