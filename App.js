@@ -2,7 +2,8 @@ var express = require("express")
 var app = express()
 var path = require("path")
 var hbs = require('express-handlebars');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 var formidable = require('formidable');
 const fs = require('fs');
 
