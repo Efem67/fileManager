@@ -118,11 +118,11 @@ app.post("/handleUpload", function (req, res) {
                 }
 
                 let sciezka = files.imageupload[i].path
-                sciezka = sciezka.split('\\')
-                sciezka = sciezka.at(-1)
+                sciezka=path.parse(sciezka).base
+                
 
                 var oldPath = files.imageupload[i].path;
-                var newPath = path.join(__dirname, 'uploadFiles') + '\\' + sciezka
+                var newPath = path.join(__dirname, 'uploadFiles',sciezka)
                 var rawData = fs.readFileSync(oldPath)
 
                 fs.writeFile(newPath, rawData, function (err) {
@@ -151,11 +151,10 @@ app.post("/handleUpload", function (req, res) {
             }
 
             let sciezka = files.imageupload.path
-            sciezka = sciezka.split('\\')
-            sciezka = sciezka.at(-1)
+            sciezka=path.parse(sciezka).base
 
             var oldPath = files.imageupload.path;
-            var newPath = path.join(__dirname, 'uploadFiles') + '\\' + sciezka
+            var newPath = path.join(__dirname, 'uploadFiles',sciezka)
             var rawData = fs.readFileSync(oldPath)
 
             fs.writeFile(newPath, rawData, function (err) {
