@@ -1,0 +1,26 @@
+{
+  "name": "lekcja-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "express-handlebars": "^5.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Efem67/fileManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Efem67/fileManager/issues"
+  },
+  "homepage": "https://github.com/Efem67/fileManager#readme"
+}
