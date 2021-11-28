@@ -110,8 +110,8 @@ app.post("/handleUpload", function (req, res) {
             var iloscPlikow = (Object.keys(files.imageupload)).length
             for (var i = 0; i < iloscPlikow; i++) {
                 let nazwa = files.imageupload[i].name
-                nazwa = nazwa.split('.')
-                let roz = nazwa.at(-1)
+                nazwa = path.parse(nazwa).ext.replace('.','')
+                let roz = nazwa
 
                 if (!(roz == 'html' || roz == 'jpeg' || roz == 'jpg' || roz == 'pdf' || roz == 'png' || roz == 'txt')) {
                     roz = 'else'
@@ -142,10 +142,10 @@ app.post("/handleUpload", function (req, res) {
                 idPliku += 1;
             }
         } catch {
-            console.log(files)
+            // console.log(files)
             let nazwa = files.imageupload.name
-            nazwa = nazwa.split('.')
-            let roz = nazwa.at(-1)
+            nazwa = path.parse(nazwa).ext.replace('.','')
+            let roz = nazwa
 
             if (!(roz == 'html' || roz == 'jpeg' || roz == 'jpg' || roz == 'pdf' || roz == 'png' || roz == 'txt')) {
                 roz = 'else'
